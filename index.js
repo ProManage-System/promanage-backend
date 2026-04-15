@@ -35,6 +35,9 @@ app.use ('/promanage/api/supplier', promanageSupplier);
 const promanageSale = require('./api/src/promanage/feature/sell/SaleRoute');
 app.use('/promanage/api/sale', promanageSale);
 
+const promanageHome = require('./api/src/promanage/feature/inventary/dashboard/Home');
+app.use('/promanage/api/dashboard', promanageHome);
+
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
